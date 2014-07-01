@@ -16,6 +16,21 @@ body {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.176);
 }
 
+/* --------------------------------------
+   Typography
+   -------------------------------------- */
+
+.brand {
+   color: $brandColor;
+}
+
+.field_with_errors {
+  color: red;
+}
+
+span.tab{
+    padding: 0 15px; /* Or desired space*/
+}
 
 /* --------------------------------------
    Navbar
