@@ -1,0 +1,129 @@
+<nav class="navbar navbar-default welly" id="navbar" role="navigation">
+	<div class="container">
+
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/">
+				<%= image_tag("logo.png", alt: "ТеплоМаркет") %>
+			</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li <%= controller.action_name == 'index' ? raw(' class="active"') : '' %> >
+					<%= link_to "Головна", '/' %>
+				</li>
+				<li <%= controller.action_name == 'contact' ? raw(' class="active"') : '' %> >
+					<%= link_to "Контакти", '#' %>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Статті <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+			            <li class="dropdown-header">
+							Кабельні системи обігріву
+						</li>
+						<li>
+							<a href="#">
+								Тепла підлога
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Саморегулюючий кабель
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Системи антиобледеніння
+							</a>
+						</li>
+						
+						<li class="divider"></li>
+
+						<li class="dropdown-header">
+							Покрівельні матеріали
+						</li>
+						<li>
+							<a href="#">Металочерепиця</a>
+						</li>
+						<li>
+							<a href="#">Металопрофіль</a>
+						</li>
+						<li>
+							<a href="#">Композитна черепиця</a>
+						</li>
+						<li>
+							<a href="#">Бітумна черепиця</a>
+						</li>
+						<li class="divider"></li>
+
+						<li class="dropdown-header">
+							Електричне опалення
+						</li>
+						<li>
+							<a href="#">Панелі "ENSA"</a>
+						</li>
+						<li>
+							<a href="#">Керамічні панелі</a>
+						</li>
+		            </ul>
+				</li>
+			</ul><!-- ul > navbar-nav -->
+			<form class="navbar-form navbar-left" role="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Пошук по сайту...">
+				</div>
+				<button type="submit" class="btn btn-default"><%= image_tag("search-icon.png", alt: "Пошук по сайту", class: "search") %></button>
+			</form><!-- form navbar-nav -->
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<%= link_to 'Каталог', '' %>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Мій профіль<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+
+						<li>
+							<%= link_to '#' do %>
+								Користувачі
+							<% end %>							
+						</li>								
+						<li>
+							<%= link_to '#' do %>
+								Мій профіль
+							<% end %>							
+						</li>						
+						<li>
+							<%= link_to '#' do %>
+								Налаштування
+							<% end %>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<%= link_to '#' do %>
+								Вихід
+							<% end %>
+						</li>					
+						<li>
+							<%= link_to '#' do %>
+								Увійти на сайт
+							<% end %>
+						</li>
+						<li>
+							<%= link_to '#' do %>
+								Зареєструватися
+							<% end %>							
+						</li>										
+					</ul>
+				</li>
+			</ul>
+		</div><!-- navbar-collapse -->
+	</div><!-- container -->
+</nav><!-- End navbar -->
