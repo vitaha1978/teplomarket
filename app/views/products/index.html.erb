@@ -1,31 +1,23 @@
-<h1>Каталог продукції</h1>
+<%= provide(:description, "Статті сайту") %>
+<%= provide(:title, "Статті сайту") %>
 
-<table>
-  <thead>
+<h1 class="brand">Каталог продукції</h1>
+
+<table class="table table-striped well prod_list">
+  <% @products.each do |product| %>
     <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Image url</th>
-      <th>Price</th>
-      <th colspan="3"></th>
+      <td><%= image_tag(product.image_url, class: "img-thumbnail", width: 100) %></td>
+      <td class="description"><%= truncate(strip_tags(product.description), length: 350) %></td>
+      <td class="list_actions">
+        <%= link_to 'Переглянути', product %>
+        <%= link_to 'Редагувати', edit_product_path(product) %>
+        <%= link_to 'Видалити', product, method: :delete,
+                      data: { confirm: 'Ви впевнені?' } %>
+      </td>
     </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.title %></td>
-        <td><%= product.description %></td>
-        <td><%= product.image_url %></td>
-        <td><%= product.price %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <% end %>
 </table>
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<%= link_to 'Новий продукт', new_product_path %>

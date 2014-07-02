@@ -1,22 +1,25 @@
+<%= provide(:description, @product.title) %>
+<%= provide(:title, @product.title) %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Назва:</strong>
   <%= @product.title %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Опис:</strong>
   <%= @product.description %>
 </p>
 
 <p>
-  <strong>Image url:</strong>
+  <strong>Картинка:</strong>
   <%= @product.image_url %>
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong>Ціна:</strong>
   <%= @product.price %>
 </p>
 

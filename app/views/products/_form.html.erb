@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_area :description, class: "form-control" %>
+    <%= f.text_area :description, rows: 8, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :image_url %><br>
@@ -28,6 +28,6 @@
     <%= f.text_field :price, class: "form-control" %>
   </div><br>
   <div class="actions">
-    <%= f.submit 'Відправити', class: "btn btn-primary" %>
+    <%= f.submit 'Зберегти', class: "btn btn-primary" %>
   </div><br>
 <% end %>
