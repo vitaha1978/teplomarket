@@ -11,7 +11,7 @@
   <div class="entry">
     <%= image_tag(product.image_url, class: "img-thumbnail", width: 100) %>
     <h3><%= link_to product.title, product %></h3>
-    <p><%= truncate(sanitize(product.description), length: 250) %></p>
+    <p><%= truncate(sanitize(product.description), length: 150) %></p>
     <div class="price_line">
       <span class="price"><%= sprintf("%0.02f", product.price) %> грн.</span>
     </div>

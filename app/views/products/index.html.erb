@@ -1,13 +1,18 @@
-<%= provide(:description, "Статті сайту") %>
-<%= provide(:title, "Статті сайту") %>
+<%= provide(:description, "Перелік продукції") %>
+<%= provide(:title, "Перелік продукції") %>
 
-<h1 class="brand">Каталог продукції</h1>
+<h1 class="brand">Перелік продукції</h1>
 
 <table class="table table-striped well prod_list">
   <% @products.each do |product| %>
     <tr>
-      <td><%= image_tag(product.image_url, class: "img-thumbnail", width: 100) %></td>
-      <td class="description"><%= truncate(strip_tags(product.description), length: 350) %></td>
+      <td>
+        <%= image_tag(product.image_url, class: "img-thumbnail", width: 100) %>
+      </td>
+      <td class="description">
+        <div><%= link_to product.title, product %></div>
+        <%= truncate(strip_tags(product.description), length: 120) %>
+      </td>
       <td class="list_actions">
         <%= link_to 'Переглянути', product %>
         <%= link_to 'Редагувати', edit_product_path(product) %>
