@@ -13,21 +13,21 @@
 
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :image_url %><br>
-    <%= f.text_field :image_url %>
+    <%= f.text_field :image_url, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :price %><br>
-    <%= f.text_field :price %>
-  </div>
+    <%= f.text_field :price, class: "form-control" %>
+  </div><br>
   <div class="actions">
-    <%= f.submit %>
-  </div>
+    <%= f.submit 'Відправити', class: "btn btn-primary" %>
+  </div><br>
 <% end %>
