@@ -91,12 +91,67 @@ span.tab{
    -------------------------------------- */
 
 #content {
-  padding: 15px 30px 30px 20px;
+  padding-top: 15px;
   margin-top: 10px;
   h1 {
     font-size: 24px;
   }
 }
+
+/* --------------------------------------
+   SideBar Styles
+   -------------------------------------- */
+
+.panel-danger {
+  .panel-heading {
+    color: #a94442;;
+  }
+}
+
+.panel-heading {  
+  .panel-title {
+    a {
+      font-size: 14px;
+      display: block;
+    }
+  }  
+}
+
+.panel-body {
+  ul {
+    padding-left: 10px;
+  }
+  li {
+    list-style: none;
+    a {
+      display: block;
+    }
+  }
+  img {
+    margin: 15px 20px 10px 5px;
+    float: left;
+  }
+}
+
+#accordion {
+   padding-top: 5px;   
+}
+
+.panel-heading {
+   .panel-title {   
+      font-weight: bold;      
+         color: #2A6496;     
+   }  
+}
+
+/* --------------------------------------
+   Right Styles
+   -------------------------------------- */
+
+#right_sidebar {
+  margin-top: 5px;
+}
+
 
 /* --------------------------------------
    Footer Styles

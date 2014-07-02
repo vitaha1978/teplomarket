@@ -10,10 +10,25 @@
 </head>
 <body>
   <%= render 'layouts/nav' %>
-  
+
   <div class="container welly" id="content">
-    <%= yield %>
+    <div class="row">
+
+      <div class="col-md-3">
+        <%= render 'layouts/sidebar' %>
+      </div>
+
+      <div class="col-md-6">
+          <%= yield %>
+      </div>
+
+      <div class="col-md-3">
+        <%= render 'layouts/right_sidebar' %>
+      </div>
+
+    </div>
   </div>
+  
 
   <%= render 'layouts/footer' %>
 </body>
