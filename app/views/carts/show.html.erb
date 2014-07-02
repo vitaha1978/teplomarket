@@ -9,7 +9,9 @@
 <ul>
   <% @cart.line_items.each do |item| %>
     <li>
-      <%= item.product.title %>
+      <%= item.quantity %> шт. <%= item.product.title %>
     </li>
   <% end %>
 </ul>
+<%= button_to "Очистити корзину", @cart, class: "btn btn-primary btn-xs", 
+                method: :delete, data: { confirm: 'Вм впевнені?' } %> 
