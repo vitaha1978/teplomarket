@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :line_items
+
   match '/contacts', to: 'static_pages#contacts', via: 'get'
 
   resources :carts

@@ -16,7 +16,7 @@ class Product < ActiveRecord::Base
   end
 
   private
-    # убеждаемся в отсутствии товарных позиций, ссылающихся на данный товар
+    # Переконуємося у відсутності товарних позицій, що ссилаються на даний товар
     def ensure_not_referenced_by_any_line_item
       if line_items.empty?
         return true
