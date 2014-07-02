@@ -1,5 +1,3 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
   title: MyString
   description: MyText
@@ -11,3 +9,12 @@ two:
   description: MyText
   image_url: MyString
   price: 9.99
+
+ruby:
+  title: Termoregulyator GREEN LEAF
+  description: 
+    Нагрівальний кабель для облаштування системи тепла підлога.
+    Нагрівальний кабель розрахований на площу від 1 кв.м до 1,3 кв.м.
+    Гарантія на теплу підлогу Hemstedt.
+  price: 49.59
+  image_url: ruby.png
