@@ -6,7 +6,7 @@
 <% end %>
 
 <h1 class="brand">Ваша корзина</h1>
-<table class="table table-striped cart">
+<table class="table table-striped table-bordered table-condensed cart">
   <% @cart.line_items.each do |item| %>
     <tr>
       <td><%= item.quantity %> шт.</td>
