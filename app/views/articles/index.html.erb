@@ -1,0 +1,23 @@
+<%= provide(:description, "Статті сайту") %>
+<%= provide(:title, "Статті сайту") %>
+
+<% @articles.each do |article| %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        <%= link_to article.name, article_path(article) %>
+      </h3>
+    </div>
+    <div class="panel-body">
+      <p>
+        <%= truncate(strip_tags(article.text), length: 300) %>
+       </p> 
+      <div class="pull-right">
+        <%= link_to "Продовжити...", article, class: 'pull-right' %>
+      </div>
+    </div>
+  </div>
+<% end %>
+<p>
+  <%= link_to 'Додати статтю', new_article_path %>
+</p>

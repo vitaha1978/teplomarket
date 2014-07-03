@@ -24,6 +24,10 @@ body {
    color: $brandColor;
 }
 
+span.tab{
+    padding: 0 15px; /* Or desired space*/
+}
+
 .field_with_errors {
   color: red;
 }

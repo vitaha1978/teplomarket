@@ -1,0 +1,23 @@
+<% provide( :description, @article.description ) %>
+<% provide( :title, @article.title ) %>
+
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      <%= @article.name %>
+    </h3>
+  </div>
+  <div class="panel-body">
+    <p id="notice"><%= notice %></p>
+    <%= sanitize(@article.text) %>
+  </div>
+</div>
+
+<%= link_to 'Назад', articles_path %> |
+<%= link_to 'Редагувати', edit_article_path(@article) %> |
+<%= link_to 'Видалити', @article, method: :delete, data: { confirm: 'Ви впевнені?' } %>
