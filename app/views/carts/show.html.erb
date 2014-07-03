@@ -6,12 +6,18 @@
 <% end %>
 
 <h1 class="brand">Ваша корзина</h1>
-<ul>
+<table class="table table-striped cart">
   <% @cart.line_items.each do |item| %>
-    <li>
-      <%= item.quantity %> шт. <%= item.product.title %>
-    </li>
+    <tr>
+      <td><%= item.quantity %> шт.</td>
+      <td><%= item.product.title %></td>
+      <td class="price"><%= sprintf("%0.02f", item.product.price) %> грн.</td>
+    </tr>
   <% end %>
-</ul>
+    <tr class="total_line">
+      <td colspan="2">Всього:</td>
+      <td><%= sprintf("%0.02f", @cart.total_price) %> грн.</td>
+    </tr>
+</table>
 <%= button_to "Очистити корзину", @cart, class: "btn btn-primary btn-xs", 
                 method: :delete, data: { confirm: 'Ви впевнені?' } %> 
