@@ -19,5 +19,6 @@
       <td><%= sprintf("%0.02f", @cart.total_price) %> грн.</td>
     </tr>
 </table>
+
 <%= button_to "Очистити корзину", @cart, class: "btn btn-primary btn-xs", 
                 method: :delete, data: { confirm: 'Ви впевнені?' } %> 
