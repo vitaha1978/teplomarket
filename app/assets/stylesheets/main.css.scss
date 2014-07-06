@@ -42,18 +42,6 @@ span.tab{
     padding: 0 15px; /* Or desired space*/
 }
 
-.adress {
-  h3.panel-title {
-    color: white;
-  }
-  .panel-body {
-    padding-top: 10px;
-  }
-  .panel-heading {
-    padding: 5px 15px;
-  }
-}
-
 /* --------------------------------------
    Navbar
    -------------------------------------- */
@@ -126,12 +114,6 @@ span.tab{
    SideBar Styles
    -------------------------------------- */
 
-.panel-danger {
-  .panel-heading {
-    color: #a94442;;
-  }
-}
-
 .panel-heading {  
   .panel-title {
     a {
@@ -159,21 +141,46 @@ span.tab{
 
 #accordion {
    padding-top: 5px;   
-}
-
-.panel-heading {
-   .panel-title {   
-      font-weight: bold;      
-         color: #2A6496;     
-   }  
+  .panel-heading {
+     .panel-title {   
+        font-weight: bold;      
+           color: #2A6496;     
+     }  
+  }
 }
 
 /* --------------------------------------
-   Right Styles
+   RightSidebar Styles
    -------------------------------------- */
 
 #right_sidebar {
   margin-top: 5px;
+}
+
+.adress {
+  h3.panel-title {
+    color: white;
+  }
+  .panel-body {
+    padding-top: 10px;
+  }
+  .panel-heading {
+    padding: 5px 15px;
+  }
+}
+
+#aktsiya {
+  .panel-heading {
+    padding: 5px;
+    text-align: center;
+  }
+  .panel-body {
+    padding: 5px 15px;
+    text-align: center;
+    h3 {
+      margin-top: 5px;
+    }
+  }    
 }
 
 
