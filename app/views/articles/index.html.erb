@@ -2,7 +2,7 @@
 <%= provide(:title, "Статті сайту") %>
 
 <% @articles.each do |article| %>
-  <div class="panel panel-default">
+  <div id="articles" class="panel panel-default">
     <div class="panel-heading">
       <h3 class="panel-title">
         <%= link_to article.name, article_path(article) %>
