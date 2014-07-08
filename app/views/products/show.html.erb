@@ -16,11 +16,13 @@
 <p>
   <%= sanitize(@product.description) %>
 </p>
-
-
-<p>
-  <strong class="brand"><%= sprintf("%0.02f", @product.price * 0.85) %></strong>
+    <span>
+      <s>Ціна: <%= sprintf("%0.02f", @product.price) %> грн.</s>
+    </span><br>
+    <strong class="brand">
+      Ціна зі знижкою: <%= sprintf("%0.02f", @product.price * 0.85) %> грн.
+    </strong><br><br>
+<p>  
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>
 </p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
