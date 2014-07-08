@@ -1,5 +1,5 @@
 class Article < ActiveRecord::Base
   def to_param
-    "#{id}-#{name}"
+    "#{id}-#{url}"
   end
 end

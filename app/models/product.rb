@@ -12,7 +12,7 @@ class Product < ActiveRecord::Base
             }
 
   def to_param
-    "#{id}-#{title}"
+    "#{id}-#{url}"
   end
 
   private
