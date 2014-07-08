@@ -10,19 +10,16 @@
 </p>
 
 <p>
-  <strong>Назва:</strong>
   <strong class="brand"><%= @product.title %></strong>
 </p>
 
 <p>
-  <strong>Опис:</strong>
   <%= sanitize(@product.description) %>
 </p>
 
 
 <p>
-  <strong>Ціна:</strong>
-  <%= @product.price * 0.85 %>
+  <strong class="brand"><%= sprintf("%0.02f", @product.price * 0.85) %></strong>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
