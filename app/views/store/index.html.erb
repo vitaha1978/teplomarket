@@ -4,6 +4,25 @@
 <% if notice %>
   <p id="notice"><%= notice %></p>
 <% end %>
+<h1 class="brand">Акційна пропозиція</h1>
+<div  id="main_presentation" class="row text-center welly">  
+  <% @products.each do |product| %>
+  <div class="col-md-3">
+    <%= image_tag(product.image_url, class: "img-thumbnail m_welly", width: 120) %>
+    <div class="title">
+      <%= link_to product.mini_title, product %>
+    </div>
+    <span class="price">
+      <s><%= sprintf("%0.02f", product.price) %> грн.</s>
+    </span><br>
+    <span class="price_disc brand">
+      <strong><%= sprintf("%0.02f", product.price * 0.85) %> грн.</strong>
+    </span>
+    <%= button_to 'Купити', line_items_path(product_id: product),
+                      class: "btn btn-primary btn-xs" %>
+  </div>
+  <% end %>
+</div>
 
 <% @articles.each do |article| %>
   <div id="articles" class="panel panel-default">
@@ -23,25 +42,3 @@
   </div>
 <% end %>
 
-<h1 class="brand">Каталог продукції</h1>
-
-<% @products.each do |product| %>
-  <div class="entry">
-    <%= image_tag(product.image_url, class: "img-thumbnail", width: 100) %>
-    <h3><%= link_to product.title, product %></h3>
-    <p>
-      <%= truncate(sanitize(product.description), length: 150) %>
-      <%= link_to 'далі....', product %>
-    </p>
-    <div class="price_line ">
-      <span>
-        <s><%= sprintf("%0.02f", product.price) %> грн.</s>
-      </span>
-      <span class="price">
-        <%= sprintf("%0.02f", product.price * 0.85) %> грн.
-      </span>
-      <%= button_to 'Додати до корзини', line_items_path(product_id: product),
-                      class: "btn btn-primary btn-xs pull-right" %>
-    </div>
-  </div>
-<% end %>

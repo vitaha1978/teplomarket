@@ -2,14 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-table.prod_list {
+.entry {
+  overflow: auto;
+  margin-top: 1.5em;
+  border-bottom: 1px dotted #2a6496;
+  min-height: 100px;
   img {
-    margin-right: 30px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    position: absolute;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.176);
   }
-  .description {
-    padding: 15px;
-  }  
-  .list_actions {
-    padding-top: 20px;
+  h3 {
+    font-size: 120%;
+    font-family: sans-serif;
+    margin-left: 130px;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  p, div.price_line {
+    form, div {
+      display: inline;
+    }
+    input {
+      margin-right: 30px;
+    }
+    margin-left: 120px;
+    margin-top: 0.5em;
+    margin-bottom: 20px;
+  }
+  .price {
+    color: #FF4500;
+    font-weight: bold;
+    margin-right: 3em;
   }
 }
+
