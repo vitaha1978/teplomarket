@@ -17,7 +17,7 @@
   <%= sanitize(@product.description) %>
 </p>
     <span>
-      <s>Ціна: <%= sprintf("%0.02f", @product.price) %> грн.</s>
+      <s><strong>Ціна: <%= sprintf("%0.02f", @product.price) %> грн.</strong></s>
     </span><br>
     <strong class="brand">
       Ціна зі знижкою: <%= sprintf("%0.02f", @product.price * 0.85) %> грн.
