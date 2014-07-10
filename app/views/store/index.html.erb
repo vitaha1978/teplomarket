@@ -18,7 +18,7 @@
     <span class="price_disc brand">
       <strong><%= sprintf("%0.02f", product.price * 0.85) %> грн.</strong>
     </span>
-    <%= button_to 'Купити', line_items_path(product_id: product),
+    <%= button_to 'Купити', line_items_path(product_id: product), remote: true,
                       class: "btn btn-primary btn-xs" %>
   </div>
   <% end %>

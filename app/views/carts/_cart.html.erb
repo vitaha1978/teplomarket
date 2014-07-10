@@ -1,19 +1,16 @@
-<table class="table table-striped table-bordered cart">
+<h6 class="brand">Ваша корзина:</h6>
+<table class="table table-striped table-bordered table-condensed">
+  
   <%= render(cart.line_items) %>
   
-    <tr>
-      <td colspan="3" class="text-right"><s>Ціна без знижки:</s></td>
-      <td><s><%= sprintf("%0.02f", cart.total_price) %> грн.</s></td>
-    </tr>
-    <tr>
-    <td colspan="3" class="text-right brand">Знижка:</td>
-      <td class="brand"><%= sprintf("%0.02f", cart.total_price * 0.15) %> грн.</td>
-    </tr>
-    <tr class="total_line">
-      <td colspan="3">Ціна зі знижкою:</td>
-      <td><%= sprintf("%0.02f", @cart.total_price * 0.85) %> грн.</td>
-    </tr>
+  <tr class="total_line">
+    <td class="brand text-right" colspan="2"><strong>Всього:</strong></td>
+    <td class="brand text-right"><strong><%= sprintf("%0.02f",cart.total_price) %> грн.</strong></td>
+  </tr>
 </table>
-
-<%= button_to "Очистити корзину", @cart, class: "btn btn-primary btn-xs", 
-                method: :delete, data: { confirm: 'Ви впевнені?' } %> 
+<div id="cart_btn" class="text-right">
+  <%= button_to "Очистити", cart, method: :delete, 
+                            data: { confirm: "Ви впевнені?" }, class: "btn btn-warning btn-xs" %>
+  <%= button_to "Оформити замовлення", cart, class: "btn btn-primary btn-xs" %>
+  <div class="clear"></div>
+</div>

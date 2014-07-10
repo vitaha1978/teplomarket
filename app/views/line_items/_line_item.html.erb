@@ -1,6 +1,15 @@
-<tr>
-  <td><%= line_item.quantity %> шт.</td>
-  <td><%= line_item.product.title %></td>
-  <td class="text-right"><%= sprintf("%0.02f", line_item.product.price) %> грн.</td>
-  <td class="price"><%= sprintf("%0.02f", line_item.total_price) %> грн.</td>      
+<% if line_item == @current_item %>
+  <tr id="current_item">
+<% else %>
+  <tr>
+<% end %>
+  <td>
+    <%= line_item.quantity %> шт.
+  </td>
+  <td>
+    <%= line_item.product.mini_title %>
+  </td>
+  <td class="text-right">
+    <%= sprintf("%0.02f",line_item.product.price) %> грн.
+  </td>
 </tr>
