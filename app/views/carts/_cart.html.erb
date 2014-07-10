@@ -4,8 +4,16 @@
   <%= render(cart.line_items) %>
   
   <tr class="total_line">
-    <td class="brand text-right" colspan="2"><strong>Всього:</strong></td>
-    <td class="brand text-right"><strong><%= sprintf("%0.02f",cart.total_price) %> грн.</strong></td>
+    <td class="text-right" colspan="2">Cума без знижки:</td>
+    <td class="text-right"><%= sprintf("%0.02f",cart.total_price) %> грн.</td>
+  </tr>
+  <tr class="total_line">
+    <td class="brand text-right" colspan="2"><strong>Знижка:</strong></td>
+    <td class="brand text-right"><strong><%= sprintf("%0.02f",cart.total_price * 0.15) %> грн.</strong></td>
+  </tr>
+  <tr class="total_line">
+    <td class="brand text-right" colspan="2"><strong>Сума зі знижкою:</strong></td>
+    <td class="brand text-right"><strong><%= sprintf("%0.02f",cart.total_price * 0.85) %> грн.</strong></td>
   </tr>
 </table>
 <div id="cart_btn" class="text-right">
