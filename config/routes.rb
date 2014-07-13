@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :orders
+
   resources :articles
 
   resources :line_items
