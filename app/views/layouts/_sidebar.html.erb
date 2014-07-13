@@ -1,9 +1,12 @@
 <div class="panel-group welly" id="accordion">
-  <div id="cart">
-    <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
-      <%= render @cart %>
-    <% end %>
-  </div>
+  <% if @cart %>
+    <div id="cart">
+      <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+        <%= render @cart %>
+      <% end %>
+    </div>
+  <% end %>
+  
 	<div class="panel panel-default">
 		<div class="panel-heading welly">
 			<h4 class="panel-title">
