@@ -19,6 +19,6 @@
 <div id="cart_btn" class="text-right">
   <%= button_to "Очистити", cart, method: :delete, 
                             data: { confirm: "Ви впевнені?" }, class: "btn btn-warning btn-xs" %>
-  <%= button_to "Оформити замовлення", cart, class: "btn btn-primary btn-xs" %>
+  <%= button_to "Оформити замовлення", new_order_path, method: :get, class: "btn btn-primary btn-xs" %>
   <div class="clear"></div>
 </div>
