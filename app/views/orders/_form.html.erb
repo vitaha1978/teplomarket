@@ -14,18 +14,18 @@
   <div class="field">
     <%= f.label :name, 'Ваше ім\'я:' %><br>
     <%= f.text_field :name, class: "form-control" %>
-  </div>
+  </div><br>
   <div class="field">
     <%= f.label :phone, 'Номер телефону:' %><br>
     <%= f.text_field :phone, class: "form-control" %>
-  </div>
+  </div><br>
   <div class="field">
     <%= f.label :email, 'Ваш email:' %><br>
-    <%= f.text_field :email, class: "form-control" %>
-  </div>
+    <%= f.email_field :email, class: "form-control" %>
+  </div><br>
   <div class="field">
     <%= f.label :pay_type, 'Виберіть спосіб оплати:' %><br>
-    <%= f.text_field :pay_type, class: "form-control" %>
+    <%= f.select :pay_type, Order::PAYMENT_TYPES, { class: "form-control" } %>
   </div><br>
   <div class="actions">
     <%= f.submit 'Відправити замовлення', class: "btn btn-primary btn-xs" %>
