@@ -48,6 +48,9 @@
     </div>
     <div class="panel-body">
       <p>
+        <%= image_tag(article.img_url, class: "img-thumbnail welly", width: 150) %>
+      </p>
+      <p>
         <%= truncate(strip_tags(article.text), length: 300) %>
        </p> 
       <div class="pull-right">
