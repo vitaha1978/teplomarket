@@ -23,15 +23,17 @@
   </div>  
 </div>
 
-<div class="panel panel-default welly" id="right_sidebar_articles">
-  <div class="panel-heading">
-    <h3 class="panel-title">Статті сайту</h3>
+<% if @articles %>
+  <div class="panel panel-default welly" id="right_sidebar_articles">
+    <div class="panel-heading">
+      <h3 class="panel-title">Статті сайту</h3>
+    </div>
+    <div class="panel-body">
+      <ul>
+        <li>
+          <%= render(partial: "articles/article", collection: @articles) %>
+        </li>      
+      </ul>    
+    </div>
   </div>
-  <div class="panel-body">
-    <ul>
-      <li>
-        <%= render(partial: "articles/article", collection: @articles) %>
-      </li>      
-    </ul>    
-  </div>
-</div>
+<% end %>
