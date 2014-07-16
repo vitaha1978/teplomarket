@@ -3,5 +3,6 @@ class StaticPagesController < ApplicationController
   before_action :set_cart
   
   def contacts
+    @articles = Article.all
   end
 end

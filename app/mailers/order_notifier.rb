@@ -12,11 +12,20 @@ class OrderNotifier < ActionMailer::Base
     mail to: order.email, subject: 'Підтвердження замовлення в ТеплоМаркет'
   end
 
+  # Підтвердження на мою почту про замовлення
+  
+  def notification(order)
+    @order = order
+
+    mail to: "shop.rivne@gmail.com", subject: 'Замовлення з сату ТеплоМаркет'
+  end
+  
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
-  #   en.order_notifier.shipped.subject
-  #
+  #   en.order_notifier.shipped.subjec 
+  
+  
   def shipped
     @order = order
     
