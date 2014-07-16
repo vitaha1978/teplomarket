@@ -1,6 +1,8 @@
 class OrdersController < ApplicationController
   include CurrentCart
   before_action :set_cart, only: [:new, :create]
+  
+  http_basic_authenticate_with name: "vitaha", password: "vitaha1978"
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   # GET /orders
