@@ -9,12 +9,14 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.all
+    @categories = Category.all
   end
 
   # GET /articles/1
   # GET /articles/1.json
   def show
     @articles = Article.all
+    @categories = Category.all
   end
 
   # GET /articles/new
@@ -74,6 +76,6 @@ class ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title, :description, :name, :text, :url, :img_url)
+      params.require(:article).permit(:title, :description, :name, :text, :url, :img_url, :category_id)
     end
 end

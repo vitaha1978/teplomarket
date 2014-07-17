@@ -4,5 +4,6 @@ class StaticPagesController < ApplicationController
   
   def contacts
     @articles = Article.all
+    @categories = Category.all
   end
 end

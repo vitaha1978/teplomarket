@@ -7,5 +7,6 @@ class StoreController < ApplicationController
     @products = Product.all
     @articles = Article.all
     @article_flagman = Article.find(4)
+    @categories = Category.all
   end
 end

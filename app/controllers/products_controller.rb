@@ -8,12 +8,14 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
     @articles = Article.all
+    @categories = Category.all
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
     @articles = Article.all
+    @categories = Category.all
   end
 
   # GET /products/new

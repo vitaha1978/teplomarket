@@ -18,31 +18,9 @@
 		<div id="collapseOne" class="panel-collapse collapse in">
 			<div class="panel-body">
 				<ul>
-					<li>
-						<a href="/categories/1-Тепла підлога">
-							Тепла підлога
-						</a>
-					</li>
-					<li>
-						<a href="/categories/3-Саморегулюючий кабель">
-							Саморегулюючий кабель
-						</a>
-					</li>
-					<li>
-						<a href="/categories/2-Системи антиобледеніння">
-							Системи антиобледеніння
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							Технологічний обігрів
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							Антиобледеніння даху
-						</a>
-					</li>
+          <li>
+            <%= render(partial: "categories/category", collection: @categories) %>
+          </li>					
 				</ul>
 			</div>
 		</div>
