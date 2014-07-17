@@ -39,7 +39,7 @@
     <%= f.label :category_id, "Виберіть категорію" %><br>
     <%= f.collection_select :category_id, Category.all, :id, :name, {prompt: "Виберіть категорію"}, {class: "form-control"} %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions"><br>
+    <%= f.submit, class: "btn btn-primary" %>
   </div>
 <% end %>

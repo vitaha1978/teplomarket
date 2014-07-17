@@ -1,10 +1,10 @@
+<% provide( :description, "" ) %>
+<% provide( :title, "" ) %>
+
 <% if notice %>
   <p id="notice"><%= notice %></p>
 <% end %>
-<p>
-  <strong class="brand">Категорія - <%= @category.name %></strong>  
-</p>
-
+<h1 class="brand">Категорія: <%= @category.name %></h1>
 <% @category.products.each do |product| %>
   <div class="entry">
     <%= image_tag(product.image_url, class: "img-thumbnail", width: 100) %>
@@ -24,10 +24,9 @@
                        class: "btn btn-primary btn-xs pull-right" %>
     </div>
   </div>
-<% end %>
+<% end %><br>
 
 <% @category.articles.each do |article| %>
-
   <div id="articles" class="panel panel-default">
     <div class="panel-heading">
       <h3 class="panel-title">
@@ -48,7 +47,6 @@
   </div>
 <% end %>
 
-<p>
-  <%= link_to 'Редагувати', edit_category_path(@category) %> |
-  <%= link_to 'Назад', categories_path %>
-</p>
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>
