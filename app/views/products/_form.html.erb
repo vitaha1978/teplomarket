@@ -35,6 +35,10 @@
     <%= f.label :price %><br>
     <%= f.text_field :price, class: "form-control" %>
   </div><br>
+  <div class="field">
+    <%= f.label :category_id, "Виберіть категорію" %><br>
+    <%= f.collection_select :category_id, Category.all, :id, :name, {prompt: "Виберіть категорію"}, {class: "form-control"} %>
+  </div>
   <div class="actions">
     <%= f.submit 'Зберегти', class: "btn btn-primary" %>
   </div><br>
