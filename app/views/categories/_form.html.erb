@@ -13,13 +13,13 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :url %><br>
-    <%= f.text_field :url %>
-  </div>
+    <%= f.text_field :url, class: "form-control"%>
+  </div><br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Зберегти', class: "btn btn-primary" %>
   </div>
 <% end %>
