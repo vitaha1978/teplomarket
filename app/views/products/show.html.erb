@@ -5,24 +5,26 @@
   <p id="notice"><%= notice %></p>
 <% end %>
 
-<p>
-  <%= image_tag(@product.image_url, class: "img-thumbnail welly", width: 150) %>
-</p>
+<div>
+  <p class="text-center">
+    <%= image_tag(@product.image_url, class: "img-thumbnail welly", width: 150) %>
+  </p>
 
-<p>
-  <strong class="brand"><%= @product.title %></strong>
-</p>
+  <p>
+    <strong class="brand"><%= @product.title %></strong>
+  </p>
 
-<p>
-  <%= sanitize(@product.description) %>
-</p>
-    <span>
-      <s><strong>Ціна: <%= sprintf("%0.02f", @product.price) %> грн.</strong></s>
-    </span><br>
-    <strong class="brand">
-      Ціна зі знижкою: <%= sprintf("%0.02f", @product.price * 0.85) %> грн.
-    </strong><br><br>
-<p>  
-  <%= link_to 'Edit', edit_product_path(@product) %> |
-  <%= link_to 'Back', products_path %>
-</p>
+  <p>
+    <%= sanitize(@product.description) %>
+  </p>
+      <span>
+        <s><strong>Ціна: <%= sprintf("%0.02f", @product.price) %> грн.</strong></s>
+      </span><br>
+      <strong class="brand">
+        Ціна зі знижкою: <%= sprintf("%0.02f", @product.price * 0.85) %> грн.
+      </strong><br><br>
+  <p>  
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
+  </p>
+</div>
