@@ -6,7 +6,7 @@ class StoreController < ApplicationController
     @products_mini = Product.where(id: Product.pluck(:id).sample(4))
     @products = Product.all
     @articles = Article.all
-    @article_flagman = Article.find(1)
+    @article_flagman = Article.last
     @categories = Category.all
   end
 end
