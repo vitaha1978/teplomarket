@@ -17,7 +17,7 @@ class OrderNotifier < ActionMailer::Base
   def notification(order)
     @order = order
 
-    mail to: "shop.rivne@gmail.com", subject: 'Замовлення з сату ТеплоМаркет'
+    mail to: "vitaliy.parshyn@gmail.com", subject: 'Замовлення з сату ТеплоМаркет'
   end
   
   # Subject can be set in your I18n file at config/locales/en.yml
