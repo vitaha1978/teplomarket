@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.last(100)
+    @articles = Article.order(created_at: :desc)
     @categories = Category.all
   end
 
