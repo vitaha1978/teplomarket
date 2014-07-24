@@ -1,6 +1,6 @@
 <h1>Listing brands</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -14,6 +14,7 @@
       <tr>
         <td><%= brand.name %></td>
         <td><%= brand.url %></td>
+        <td><%= brand.discount %> %</td>
         <td><%= link_to 'Show', brand %></td>
         <td><%= link_to 'Edit', edit_brand_path(brand) %></td>
         <td><%= link_to 'Destroy', brand, method: :delete, data: { confirm: 'Are you sure?' } %></td>
