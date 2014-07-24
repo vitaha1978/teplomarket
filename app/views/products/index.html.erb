@@ -16,7 +16,11 @@
         <s><%= sprintf("%0.02f", product.price) %> грн.</s>
       </span>
       <span class="price">
-        <%= sprintf("%0.02f", product.price * 0.85) %> грн.
+        <% if product.brand.discount %>
+          <%= sprintf("%0.02f", product.price - (product.price / 100 * product.brand.discount) ) %> грн.
+        <% else %>
+          <%= sprintf("%0.02f", product.price * 0.95 ) %> грн.
+        <% end %>
       </span>
       <%= button_to 'Додати до корзини', line_items_path(product_id: product),
                        class: "btn btn-primary btn-xs pull-right" %>
