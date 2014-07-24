@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   def index
-    @products = Product.all
+    @products = Product.order(created_at: :desc)
     @articles = Article.all
     @categories = Category.all
   end
