@@ -39,6 +39,10 @@
     <%= f.label :category_id, "Виберіть категорію" %><br>
     <%= f.collection_select :category_id, Category.all, :id, :name, {prompt: "Виберіть категорію"}, {class: "form-control"} %>
   </div><br>
+  <div class="field">
+    <%= f.label :brand_id, "Виберіть Бренд" %><br>
+    <%= f.collection_select :brand_id, Brand.all, :id, :name, {prompt: "Виберіть Бренд"}, {class: "form-control"} %>
+  </div><br>
   <div class="actions">
     <%= f.submit 'Зберегти', class: "btn btn-primary" %>
   </div><br>

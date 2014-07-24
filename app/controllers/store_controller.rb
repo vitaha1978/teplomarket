@@ -8,5 +8,6 @@ class StoreController < ApplicationController
     @articles = Article.all
     @article_flagman = Article.last
     @categories = Category.all
+    @brands = Brand.all
   end
 end

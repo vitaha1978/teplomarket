@@ -1,0 +1,18 @@
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+  <strong>Name:</strong>
+  <%= @brand.name %>
+
+<p>
+  <strong>Url:</strong>
+  <%= @brand.url %>
+</p>
+
+<p>
+  <strong>Img:</strong>
+  <%= image_tag(@brand.img, class: "img-thumbnail welly", width: 150) %>
+</p>
+
+<%= link_to 'Edit', edit_brand_path(@brand) %> |
+<%= link_to 'Back', brands_path %>
