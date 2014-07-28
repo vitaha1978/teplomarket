@@ -1,0 +1,19 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.gravatar {
+  img {
+    margin-right: 10px;
+  }
+  span.text {
+    vertical-align: top;
+  }
+}
+
+.new_user {
+  .form-control {
+    border: 1px solid #bbb;
+    width: 60%;
+  }
+}
