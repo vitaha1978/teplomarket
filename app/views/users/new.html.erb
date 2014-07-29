@@ -1,10 +1,12 @@
-<% provide(:title, 'Sign up') %>
+<% provide(:title, 'Реєстрація на сайті') %>
+
 <h1 class="brand">Реєстрація на сайті</h1>
 
 <div class="row new_user">
   <div class="span6 offset3">
     <%= form_for(@user) do |f| %>
-
+      <%= render 'shared/error_messages' %>
+    
       <%= f.label :name, "Ваше ім'я" %>
       <%= f.text_field :name, class: "form-control" %>
 

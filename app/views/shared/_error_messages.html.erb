@@ -1,0 +1,12 @@
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <div class="label label-danger">
+      Форма містить помилки у кількості: <%= @user.errors.count %> шт.
+    </div>
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li class=""><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
