@@ -1,17 +1,27 @@
 <% provide(:title, "Увійти на сайт") %>
 <h3 class="brand">Вхід</h3>
 
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>"><%= value %></div>
+<% end %>
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(:session, url: sessions_path) do |f| %>
 
-      <%= f.label :email %>
+    <div class="field">
+      <%= f.label :email, "Ваша почта" %><br>
       <%= f.text_field :email %>
-
-      <%= f.label :password %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :password, "Пароль" %><br>
       <%= f.password_field :password %>
-
-      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+    </div>
+    
+    <div class="actions"><br>
+      <%= f.submit "Увійти", class: "btn btn-sm btn-primary" %>
+    </div><br>
+    
     <% end %>
 
     <p>Новий користувач? <%= link_to "Зареэструйтеся!", signup_path %></p>
