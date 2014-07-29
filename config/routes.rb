@@ -8,8 +8,12 @@ Rails.application.routes.draw do
   resources :line_items
   resources :carts
   resources :products
+  resources :sessions, only: [:new, :create, :destroy]
   
-  match '/signup',  to: 'users#new',              via: 'get'
+  match '/signup',   to: 'users#new',             via: 'get'
+  match '/signin',   to: 'sessions#new',          via: 'get'
+  match '/signout',  to: 'sessions#destroy',      via: 'delete'
+  
   match '/contacts', to: 'static_pages#contacts', via: 'get'
 
   resources :products do
