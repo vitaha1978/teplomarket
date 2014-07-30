@@ -1,8 +1,6 @@
 <h3>Список користувачів сайту:</h3>
 <% provide(:title, 'Список користувачів сайту') %>
 
-
-
   <ul class="users">
     <% @users.each do |user| %>
       <li>
@@ -12,4 +10,4 @@
     <% end %>
   </ul>
 
-<%= will_paginate @users %>
+
