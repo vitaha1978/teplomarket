@@ -1,0 +1,37 @@
+<% provide(:title, "Редагувати профіль") %>
+<h1>Редагувати профіль</h1>
+
+<div class="row edit_user">
+  <div class="span6 offset3">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+    
+      <div class="field">
+        <%= f.label :name, "Ім'я" %><br>
+        <%= f.text_field :name %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email, "Електронна адреса" %><br>
+        <%= f.text_field :email %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password, "Пароль" %><br>
+        <%= f.password_field :password %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation, "Підтвердіть пароль" %><br>
+        <%= f.password_field :password_confirmation %>
+      </div>
+
+      <div class="actions"><br>
+        <%= f.submit "Зберегти зміни", class: "btn btn-xs btn-primary" %><br>
+      </div><br>
+    <% end %>
+
+    <%= gravatar_for @user %>
+    <a href="http://gravatar.com/emails">Змінити аватарку</a>
+  </div>
+</div>

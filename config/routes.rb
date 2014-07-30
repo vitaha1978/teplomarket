@@ -21,5 +21,5 @@ Rails.application.routes.draw do
   end
 
   get 'store/index'
-  root to: 'store#index', as: 'store'
+  root to: 'store#index'
 end
