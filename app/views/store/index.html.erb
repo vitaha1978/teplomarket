@@ -5,6 +5,25 @@
   <p id="notice"><%= notice %></p>
 <% end %>
 
+<h1 class="brand">Акційна пропозиція -15%</h1>
+<div  id="main_presentation" class="row text-center welly">  
+  <% @products_mini.each do |product| %>
+  <div class="col-md-3">
+    <%= image_tag(product.image_url, class: "img-thumbnail m_welly", width: 120) %>
+    <div class="title">
+      <%= link_to product.mini_title, product %>
+    </div>
+    <span class="price">
+      <s><%= sprintf("%0.02f", product.price) %> грн.</s>
+    </span><br>
+    <span class="price_disc brand">
+      <strong><%= sprintf("%0.02f", product.price * 0.85) %> грн.</strong>
+    </span>
+    <%= button_to 'Придбати', line_items_path(product_id: product), remote: true,
+                      class: "btn btn-primary btn-xs" %>
+  </div>
+  <% end %>
+</div>
 
 <div id="articles" class="panel panel-default">
     <div class="panel-heading">
