@@ -6,25 +6,7 @@
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages' %>
     
-      <div class="field">
-        <%= f.label :name, "Ім'я" %><br>
-        <%= f.text_field :name %>
-      </div>
-
-      <div class="field">
-        <%= f.label :email, "Електронна адреса" %><br>
-        <%= f.text_field :email %>
-      </div>
-
-      <div class="field">
-        <%= f.label :password, "Пароль" %><br>
-        <%= f.password_field :password %>
-      </div>
-
-      <div class="field">
-        <%= f.label :password_confirmation, "Підтвердіть пароль" %><br>
-        <%= f.password_field :password_confirmation %>
-      </div>
+    <%= render 'fields', f: f %>
 
       <div class="actions"><br>
         <%= f.submit "Зберегти зміни", class: "btn btn-xs btn-primary" %><br>
