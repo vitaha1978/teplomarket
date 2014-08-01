@@ -1,6 +1,7 @@
 <%= provide(:description, "Статті сайту") %>
 <%= provide(:title, "Статті сайту") %>
 
+
 <% @articles.each do |article| %>
   <div id="articles" class="panel panel-default">
     <div class="panel-heading">
@@ -21,6 +22,8 @@
     </div>
   </div>
 <% end %>
+<%= will_paginate @articles, renderer: BootstrapPagination::Rails %>
+
 <p>
   <%= link_to 'Додати статтю', new_article_path %>
 </p>
