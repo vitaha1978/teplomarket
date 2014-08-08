@@ -1,5 +1,5 @@
-<% provide( :description, "" ) %>
-<% provide( :title, "" ) %>
+<% provide( :description, @category.name ) %>
+<% provide( :title, @category.name ) %>
 
 <% if notice %>
   <p id="notice"><%= notice %></p>
