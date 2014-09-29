@@ -14,12 +14,9 @@
       <%= link_to 'далі...', product %>
     </p>
     <div class="price_line ">
-      <span>
-        <s><%= sprintf("%0.02f", product.price) %> грн.</s>
-      </span>
-      <span class="price">
-        <%= sprintf("%0.02f", product.price * 0.85) %> грн.
-      </span>
+      <span class="brand">
+        <%= sprintf("%0.02f", product.price) %> грн.
+      </span>      
       <%= button_to 'Додати до корзини', line_items_path(product_id: product),
                        class: "btn btn-primary btn-xs pull-right" %>
     </div>
